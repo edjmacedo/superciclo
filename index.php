@@ -5,12 +5,7 @@
 <title>ConsultoriaSuperCiclo</title>
 <script type="text/javascript" language="javascript" src="script/libs/jquery.js"></script>
 <script type="text/javascript" language="javascript" src="script/libs/lib.js"></script>
-<script type="text/javascript" language="javascript" src="script/libs/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" language="javascript" src="script/libs/jquery-ui-1.8.4.custom.min.js"></script>
-<script type="text/javascript" language="javascript" src="script/libs/jquery.tokeninput.js"></script>
 <script type="text/javascript" language="javascript" src="script/libs/jquery.extras.js"></script>
-<script type="text/javascript" language="javascript" src="script/libs/jquery.quicksearch.js"></script>
-<script type="text/javascript" language="javascript" src="script/libs/jquery.autocomplete.js"></script>
 <script type="text/javascript" language="javascript" src="script/libs/jquery.maskedinput.js"></script>
 <script type="text/javascript" language="javascript" src="script/services/service.js"></script>
 <script type="text/javascript" language="javascript" src="script/services/sessionService.js"></script>

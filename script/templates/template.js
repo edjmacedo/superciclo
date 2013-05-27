@@ -65,9 +65,6 @@ template = {
 				      '&nbsp;'+
 				    '</p>'+
 				  '</div>'+
-				  '<a class="btn btn-info" href="#">'+
-				    '{SEEMOREBTN}'+
-				  '</a>'+
 				'</div>'+
 			      '</div>'+
 			      '<hr>'+

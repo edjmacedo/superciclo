@@ -59,7 +59,7 @@
           <div class="navbar-form pull-right">
             <input name="textinput1" id="Email" type="email" placeholder="Email" class="span2">
             <input name="textinput2" id="Password" type="password" placeholder="Password" class="span2">
-            <button class="btn">
+            <button class="btn" id="login-btn">
               Entrar
             </button>
           </div>          

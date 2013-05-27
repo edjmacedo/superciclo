@@ -12,7 +12,6 @@ wb.home = {
 	render: function(data){    
 	  document.getElementById('home').innerHTML = template.componentIndex.replace("{MAINLABELTITLE}", "A ConsultoriaSuperCiclo" )
 		  .replace("{MAINTEXT}","A ConsultoriaSuperCiclo vem cada vez mais se especializando em medicina e segurança do trabalho, desenvolvendo seus trabalhos no assessoramento e apois às empresas no cumprimento das exigências das normas regulamentadores do ministério do trabalho e emprego, além de buscar as melhores soluções para as questões que envolvam a saúde dos colaboradores de nossos clientes e o próprio ambiente em que os mesmos atuam.")
-		  .replace("{SEEMOREBTN}","Veja mais")
                   .replace("{MAINIMG}", "style/img/mainImage.jpg")
 		  .replace("{FOOTER}","@ConsultoriaSuperCiclo 2013");
                   

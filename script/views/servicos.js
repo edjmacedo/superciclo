@@ -10,7 +10,7 @@ wb.servicos = {
 	bind: function(){
 	},
 	render: function(data){    
-	  document.getElementById('servicos').innerHTML = template.componentEmpresa.replace("{MAINLABELTITLE}", "Assessiria e Consultoria" )
+	  document.getElementById('servicos').innerHTML = template.componentEmpresa.replace("{MAINLABELTITLE}", "Assessoria e Consultoria" )
 		  .replace("{MAINTEXT}","<ul><li>Implantação e Implementação de CIPA</li><li>Brigada de Incêndio</li>"+
                       "<li>Bombeiro Civil</li><li>EIA – Estudo de Impacto Ambiental</li>"+
                       "<li>RIMA – Relatório de Impacto ao Meio Ambiente</li></ul>")		  

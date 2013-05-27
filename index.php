@@ -39,16 +39,13 @@
 
 
 <link rel="stylesheet" href="style/reset.css" type="text/css">
-<link rel="stylesheet" href="style/bootstrap-responsive.css" type="text/css">
-<link rel="stylesheet" href="style/bootstrap-responsive.min.css" type="text/css">
 <link rel="stylesheet" href="style/bootstrap.css" type="text/css">
-<link rel="stylesheet" href="style/bootstrap-responsive.min.css" type="text/css">
 
 <link rel="stylesheet" href="style/eggplant/jquery-ui-1.8.4.custom.css" type="text/css">
 </head>
 
 <body>
-<div class="navbar navbar-fixed-top">    
+<div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="index.php">
@@ -62,39 +59,39 @@
             <button class="btn" id="login-btn">
               Entrar
             </button>
-          </div>          
+          </div>
           <ul class="nav nav-tabs" id="menuactive">
           </ul>
-        </div>    
-      </div>      
-    </div>    
+        </div>
+      </div>
+    </div>
     <br/>
     <br/>
     <br/>
     <div id="container" class="container">
-          <div id="secondmenu" class="secondmenu"></div>
-	  <div id="loading" class="loading" style="display:none;"></div>          
-	  <div id="home" class="home" style="display:none;"></div>
-          <div id="secondmenu" class="secondmenu" style="display:none;"></div>
-	  <div id="contato" class="contato" style="display:none;"></div>
-	  <div id="about" class="about" style="display:none;"></div>
-          <div id="cadastrousuario" class="cadastrousuario" style="display:none;"></div>
-          <div id="cadastroclinica" class="cadastroclinica" style="display:none;"></div>
-          <div id="exclusaousuarios" class="exclusaousuarios" style="display:none;"></div> 
-          <div id="exclusaoclinicas" class="exclusaoclinicas" style="display:none;"></div>
-          <div id="cadastroencaminhamento" class="cadastroencaminhamento" style="display:none;"></div>
-          <div id="editarencaminhamento" class="editarencaminhamento" style="display:none;"></div>
-          <div id="encaminhamentosAndamento" class="encaminhamentosAndamento" style="display:none;"></div>
-          <div id="encaminhamentosFechar" class="encaminhamentosFechar" style="display:none;"></div>
-          <div id="cadastroencaminhamentouser" class="cadastroencaminhamentouser" style="display:none;"></div>
-          <div id="cadastroEmpresa" class="cadastroEmpresa" style="display:none;"></div>
-          <div id="exclusaoEmpresa" class="exclusaoEmpresa" style="display:none;"></div>
-          <div id="meusEncaminhamentos" class="meusEncaminhamentos" style="display:none;"></div>
-          <div id="empresa" class="empresa" style="display:none;"></div>
-          <div id="servicos" class="servicos" style="display:none;"></div>
-          <div id="parceiros" class="parceiros" style="display:none;"></div>          
-	</div>
-    
+        <div id="secondmenu" class="secondmenu"></div>
+        <div id="loading" class="loading" style="display:none;"></div>
+        <div id="home" class="home" style="display:none;"></div>
+        <div id="secondmenu" class="secondmenu" style="display:none;"></div>
+        <div id="contato" class="contato" style="display:none;"></div>
+        <div id="about" class="about" style="display:none;"></div>
+        <div id="cadastrousuario" class="cadastrousuario" style="display:none;"></div>
+        <div id="cadastroclinica" class="cadastroclinica" style="display:none;"></div>
+        <div id="exclusaousuarios" class="exclusaousuarios" style="display:none;"></div>
+        <div id="exclusaoclinicas" class="exclusaoclinicas" style="display:none;"></div>
+        <div id="cadastroencaminhamento" class="cadastroencaminhamento" style="display:none;"></div>
+        <div id="editarencaminhamento" class="editarencaminhamento" style="display:none;"></div>
+        <div id="encaminhamentosAndamento" class="encaminhamentosAndamento" style="display:none;"></div>
+        <div id="encaminhamentosFechar" class="encaminhamentosFechar" style="display:none;"></div>
+        <div id="cadastroencaminhamentouser" class="cadastroencaminhamentouser" style="display:none;"></div>
+        <div id="cadastroEmpresa" class="cadastroEmpresa" style="display:none;"></div>
+        <div id="exclusaoEmpresa" class="exclusaoEmpresa" style="display:none;"></div>
+        <div id="meusEncaminhamentos" class="meusEncaminhamentos" style="display:none;"></div>
+        <div id="empresa" class="empresa" style="display:none;"></div>
+        <div id="servicos" class="servicos" style="display:none;"></div>
+        <div id="parceiros" class="parceiros" style="display:none;"></div>
+    </div>
+
 </div>
 </body>
 </html>

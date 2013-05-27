@@ -51,11 +51,11 @@ template = {
 				'</div>'+
 				'<div class="span8">'+
 				  '<div>'+
-				    '<h1>'+
+				    '<h3>'+
 				      '<strong>'+
 					'{MAINLABELTITLE}'+
 				      '</strong>'+
-				    '</h1>'+
+				    '</h3>'+
 				    '<p align="justify">'+
 				      '<span style="text-align:justify; font-size: 13.333333969116211px;">'+
 					'{MAINTEXT}'+

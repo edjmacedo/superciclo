@@ -2,12 +2,16 @@ var wb = window.wb || {};
 
 wb.exclusaoEmpresa = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");                                
-		wb.exclusaoEmpresa.bind();
-		wb.exclusaoEmpresa.render();	
-                service.getEmpresas(function(data) {
-                    wb.exclusaoEmpresa.renderEmpresas(data);
-		});
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");
+    		wb.exclusaoEmpresa.bind();
+		    wb.exclusaoEmpresa.render();	
+            service.getEmpresas(function(data) {
+                wb.exclusaoEmpresa.renderEmpresas(data);
+		    });
+        }else{
+            window.location = 'index.php';
+        }
 	},
 	bind: function(){             
             $('.navbar-form').hide();

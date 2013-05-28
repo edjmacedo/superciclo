@@ -48,10 +48,9 @@ wb.contato = {
                 $.ajax(params);	        
               }
 	    });
-         $('.btn').click(function (){
-             wb.login(document.getElementById('Email').value, document.getElementById('Password').value); 
-          }); 
-	  
+	    $('.btn').click(function (){
+             wb.login(document.getElementById('Email').value, sha1(document.getElementById('Password').value));
+         });
 	},
 	destroy: function(){
 	}

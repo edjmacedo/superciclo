@@ -2,14 +2,23 @@ var wb = window.wb || {};
 
 wb.cadastroEmpresa = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");
-                document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE03}", "active").replace("{LINK01}", "index.php?page=cadastrousuario").replace("{LINKLABEL}", "Cadastro de Usuários/Clientes")
-                                                                .replace("{LINK02}","index.php?page=exclusaousuarios").replace("{LINKLABEL02}", "Exclusão de usuários")
-                                                                .replace("{LINK03}","index.php?page=cadastroEmpresa").replace("{LINKLABEL03}", "Cadastro de Empresas")
-                                                                .replace("{LINK04}","index.php?page=exclusaoEmpresa").replace("{LINKLABEL04}", "Exclusão de Empresas");
-                $('.navbar-form').hide();                                
-		wb.cadastroEmpresa.bind();
-		wb.cadastroEmpresa.render();		
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");
+            document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE03}", "active")
+                .replace("{LINK01}", "index.php?page=cadastrousuario")
+                .replace("{LINKLABEL}", "Cadastro de Usuários/Clientes")
+                .replace("{LINK02}","index.php?page=exclusaousuarios")
+                .replace("{LINKLABEL02}", "Exclusão de usuários")
+                .replace("{LINK03}","index.php?page=cadastroEmpresa")
+                .replace("{LINKLABEL03}", "Cadastro de Empresas")
+                .replace("{LINK04}","index.php?page=exclusaoEmpresa")
+                .replace("{LINKLABEL04}", "Exclusão de Empresas");
+            $('.navbar-form').hide();
+		    wb.cadastroEmpresa.bind();
+		    wb.cadastroEmpresa.render();
+        }else{
+            window.location = 'index.php';
+        }
 	},
 	bind: function(){                         
 	},

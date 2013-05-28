@@ -10,6 +10,7 @@
 <script type="text/javascript" language="javascript" src="script/services/service.js"></script>
 <script type="text/javascript" language="javascript" src="script/services/sessionService.js"></script>
 <script type="text/javascript" language="javascript" src="script/templates/template.js"></script>
+<script type="text/javascript" language="javascript" src="script/libs/utils.js"></script>
 <script type="text/javascript" language="javascript" src="script/i18n.js"></script>
 <script type="text/javascript" language="javascript" src="script/wb.js"></script>  
 <script type="text/javascript" language="javascript" src="script/views/home.js"></script> 

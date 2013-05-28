@@ -2,12 +2,16 @@ var wb = window.wb || {};
 
 wb.exclusaoclinicas = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK02}","active");                                
-		wb.exclusaoclinicas.bind();
-		wb.exclusaoclinicas.render();	
-                service.getClinicas(function(data) {
-                    wb.exclusaoclinicas.renderClinicas(data);
-		});
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK02}","active");
+		    wb.exclusaoclinicas.bind();
+		    wb.exclusaoclinicas.render();	
+            service.getClinicas(function(data) {
+                wb.exclusaoclinicas.renderClinicas(data);
+    		});
+        }else{
+            window.location = 'index.php';
+        }
 	},
 	bind: function(){             
             $('.navbar-form').hide();              

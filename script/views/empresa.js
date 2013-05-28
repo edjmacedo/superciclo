@@ -20,10 +20,9 @@ wb.empresa = {
                   .replace("{FOURTHMAINTEXT}", "Disciplinar e regulamentar procedimentos, fornecendo condições de trabalho avaliadas sob o enfoque da saúde, do meio ambiente e dos riscos ocupacionais.")
                   .replace("{MAINIMG}", "style/img/Logo.png")
 		  .replace("{FOOTER}","@ConsultoriaSuperCiclo 2013");
-                  
-          $('.btn').click(function (){
-             wb.login(document.getElementById('Email').value, document.getElementById('Password').value); 
-          });           
+         $('.btn').click(function (){
+             wb.login(document.getElementById('Email').value, sha1(document.getElementById('Password').value));
+          }); 
 	},
 	destroy: function(){
 	}

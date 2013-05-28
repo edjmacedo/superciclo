@@ -2,12 +2,16 @@ var wb = window.wb || {};
 
 wb.exclusaousuarios = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");                                
-		wb.exclusaousuarios.bind();
-		wb.exclusaousuarios.render();	
-                service.getUsuarios(function(data) {
-                    wb.exclusaousuarios.renderUsuarios(data);
-		});
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");
+		    wb.exclusaousuarios.bind();
+    		wb.exclusaousuarios.render();	
+            service.getUsuarios(function(data) {
+                wb.exclusaousuarios.renderUsuarios(data);
+    		});
+        }else{
+            window.location = 'index.php';
+        }
 	},
 	bind: function(){             
             $('.navbar-form').hide();

@@ -10,10 +10,10 @@ wb.parceiros = {
 	bind: function(){
 	},
 	render: function(data){    
-	  document.getElementById('parceiros').innerHTML = template.ComponentParceiros;                  
-          $('.btn').click(function (){
-             wb.login(document.getElementById('Email').value, document.getElementById('Password').value); 
-          });           
+	    document.getElementById('parceiros').innerHTML = template.ComponentParceiros;                  
+        $('.btn').click(function (){
+            wb.login(document.getElementById('Email').value, sha1(document.getElementById('Password').value));
+        });
 	},
 	destroy: function(){
 	}

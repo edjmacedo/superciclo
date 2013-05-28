@@ -2,15 +2,19 @@ var wb = window.wb || {};
 
 wb.encaminhamentosAndamento = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK03}","active");                                
-		wb.encaminhamentosAndamento.bind();
-		wb.encaminhamentosAndamento.render();	
-                service.getEncaminhamentosAndamento(function(data) {
-                    wb.encaminhamentosAndamento.renderEncaminhamentos(data);
-		});
-                service.getClinicas(function(data) {
-                    wb.encaminhamentosAndamento.renderEncaminhamentos(data);
-		});
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK03}","active"); 
+            wb.encaminhamentosAndamento.bind();
+            wb.encaminhamentosAndamento.render();	
+            service.getEncaminhamentosAndamento(function(data) {
+                wb.encaminhamentosAndamento.renderEncaminhamentos(data);
+		    });
+            service.getClinicas(function(data) {
+                wb.encaminhamentosAndamento.renderEncaminhamentos(data);
+		    });
+        }else{
+            window.location = 'index.php';
+        }
 	},
 	bind: function(){             
             $('.navbar-form').hide(); 

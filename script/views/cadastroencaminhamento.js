@@ -14,19 +14,19 @@ wb.cadastroencaminhamento = {
                                                                 .replace("{LINK04}","index.php?page=encaminhamentosFechar")
                                                                 .replace("{LINKLABEL04}", "Fechar encaminhamento");
                 $('.navbar-form').hide();
-		service.getClinicas(function(data) {
+		        service.getClinicas(function(data) {
                     wb.cadastroencaminhamento.render(data);
-		});		
+	        	});
                 wb.cadastroencaminhamento.bind();
             }else{
                 window.location = 'index.php';
             }
-                
-	},        
-	bind: function(){                
+
 	},
-	render: function(data){            
-          var activity = "";            
+	bind: function(){
+	},
+	render: function(data){
+          var activity = "";
           var tamanho = data['clinicas'].length;
           for(x = 0; x < tamanho; x++){
             var item = data['clinicas'][x];

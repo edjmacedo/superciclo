@@ -75,9 +75,8 @@ wb = {
 			global : false,
 			type : "POST",
 			data : {
-				login : document.getElementById('Email').value,
-				senha : document.getElementById('Password').value
-
+				login : user,
+				senha : pass
 			},
 			dataType : "json",
 			async : false,
@@ -93,7 +92,6 @@ wb = {
                                 }else{
                                     window.location = 'index.php?page=cadastroencaminhamentouser';
                                 }
-				                                
 			},
 			error : function(data) {
 				alert('Usuário ou senha inválido');

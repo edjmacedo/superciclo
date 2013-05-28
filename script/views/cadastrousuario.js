@@ -2,22 +2,32 @@ var wb = window.wb || {};
 
 wb.cadastrousuario = {
 	init: function(){
+            if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
                 document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK01}","active");
-                document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE01}", "active").replace("{LINK01}", "index.php?page=cadastrousuario").replace("{LINKLABEL}", "Cadastro de Usuários/Clientes")
-                                                                .replace("{LINK02}","index.php?page=exclusaousuarios").replace("{LINKLABEL02}", "Exclusão de usuários")
-                                                                .replace("{LINK03}","index.php?page=cadastroEmpresa").replace("{LINKLABEL03}", "Cadastro de Empresas")
-                                                                .replace("{LINK04}","index.php?page=exclusaoEmpresa").replace("{LINKLABEL04}", "Exclusão de Empresas");
-                $('.navbar-form').hide();                                
-		wb.cadastrousuario.bind();
+                document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE01}", "active")
+                    .replace("{LINK01}", "index.php?page=cadastrousuario")
+                    .replace("{LINKLABEL}", "Cadastro de Usuários/Clientes")
+                    .replace("{LINK02}","index.php?page=exclusaousuarios")
+                    .replace("{LINKLABEL02}", "Exclusão de usuários")
+                    .replace("{LINK03}","index.php?page=cadastroEmpresa")
+                    .replace("{LINKLABEL03}", "Cadastro de Empresas")
+                    .replace("{LINK04}","index.php?page=exclusaoEmpresa")
+                    .replace("{LINKLABEL04}", "Exclusão de Empresas");
+
+                $('.navbar-form').hide(); 
+    		    wb.cadastrousuario.bind();
                 service.getEmpresas(function(data) {
                     wb.cadastrousuario.render(data);
-		});				
+                });
+            }else{
+                window.location = 'index.php';
+            }
 	},
-	bind: function(){             
+	bind: function(){
 
 	},
 	render: function(data){
-            var activity = "";            
+            var activity = "";
             var tamanho = data['empresas'].length;
             for(x = 0; x < tamanho; x++){
                 var item = data['empresas'][x];
@@ -25,7 +35,7 @@ wb.cadastrousuario = {
             }
 
 	  document.getElementById('cadastrousuario').innerHTML = template.Componentadduser.replace("{EMPRESAS}", activity);
-          
+
           $('.Cadastrar').click(function (){
               var nome = document.getElementById('name-user').value;
               var email = document.getElementById('email-user').value;
@@ -37,14 +47,14 @@ wb.cadastrousuario = {
               }else if( senha == "" || senha == " "){
                   alert("Preencha todos os campos");
               }else{
-	        var params = {
+	             var params = {
                     url: service.getBaseUrl()+'adduser.php',
                     global: false,
                     type: "POST",
                     data: {
                         "nome": document.getElementById('name-user').value,
                         "email": document.getElementById('email-user').value,
-                        "senha": document.getElementById('password-user').value,
+                        "senha": sha1($('#password-user').val()),
                         "empresa": $("input[name='empresas']:checked").val(),
                         "usertype": document.getElementById('user-type').value
                     },
@@ -60,11 +70,11 @@ wb.cadastrousuario = {
                     error: function(data) {
                       Alert("Cannot connect to the server. Please try again later!");
                     }
-                };                
-                $.ajax(params);	        
+                };
+                $.ajax(params);
               }
 	    });
-	  
+
 	},
 	destroy: function(){
 	}

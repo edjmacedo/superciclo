@@ -2,15 +2,23 @@ var wb = window.wb || {};
 
 wb.cadastroclinica = {
 	init: function(){
-                document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK02}","active");  
-                document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE01}", "active").replace("{LINK01}", "index.php?page=cadastroclinica").replace("{LINKLABEL}", "Cadastro de Clinicas")
-                                                                .replace("{LINK02}","index.php?page=exclusaoclinicas").replace("{LINKLABEL02}", "Exclusão de clinicas");
+        if (wb.user != null && wb.user != 'undefined' && wb.tipo == "admin") { 
+            document.getElementById('menuactive').innerHTML = template.componentLogged.replace("{LINK02}","active");  
+            document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE01}", "active")
+                .replace("{LINK01}", "index.php?page=cadastroclinica")
+                .replace("{LINKLABEL}", "Cadastro de Clinicas")
+                .replace("{LINK02}","index.php?page=exclusaoclinicas")
+                .replace("{LINKLABEL02}", "Exclusão de clinicas");
+
                 $('.navbar-form').hide();
                 $('#link-03').hide();
                 $('#link-04').hide();
-		wb.cadastroclinica.render();		
-                wb.cadastroclinica.bind();
-	},
+		    wb.cadastroclinica.render();
+            wb.cadastroclinica.bind();
+        }else{
+            window.location='index.php';
+        }
+    },
 	bind: function(){    
             $("#endereco-telefone").mask("(999) 9999-9999");
 	},

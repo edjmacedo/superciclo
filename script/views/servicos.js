@@ -35,10 +35,9 @@ wb.servicos = {
                       "<li>Básico de Sobrevivência na Selva</li></ul>")                  
                   .replace("{MAINIMG}", "style/img/Logo.png")
 		  .replace("{FOOTER}","@ConsultoriaSuperCiclo 2013");
-                  
-          $('.btn').click(function (){
-             wb.login(document.getElementById('Email').value, document.getElementById('Password').value); 
-          });           
+         $('.btn').click(function (){
+             wb.login(document.getElementById('Email').value, sha1(document.getElementById('Password').value));
+         });
 	},
 	destroy: function(){
 	}

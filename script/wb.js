@@ -34,7 +34,10 @@ wb = {
 		wb.bind();
 		
 	},
-	bind : function() {                            
+	bind : function() {
+        $('#menu-sair').click(function(){
+            wb.logout();
+        })
 	},
 	getPage : function(page) {
 		if(page != undefined && lib.browser.getCookie("UID") != undefined) {
@@ -105,7 +108,7 @@ wb = {
 					// alert(lib.browser.getCookie("UID"));
 					lib.browser.deleteCookie("UID", "", "");
 				}
-				lib.views.set('home', {}, wb);
+				lib.views.set('index.php?page=home', {}, wb);
 				wb.user = null;
 				//wb.setupUser();
 			}

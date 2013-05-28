@@ -40,8 +40,8 @@ template = {
 				      ''+
 				    '</a>'+
 				  '</li>'+
-                                  '<li class="">'+
-				    '<a href="index.php">'+
+                  '<li class="" id="menu-sair">'+
+				    '<a href="#">'+
 				      'Sair'+
 				    '</a>'+
 				  '</li>',

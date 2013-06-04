@@ -23,8 +23,8 @@ if ($result) {
 	$_SESSION['loggeduser']['id'] = $result['uid'];	
 	$_SESSION['loggeduser']['name'] = $result['nome'];
 	$_SESSION['loggeduser']['email'] = $result['email'];
-        $_SESSION['loggeduser']['tipo'] = $result['tipo'];
-        $_SESSION['loggeduser']['empresa'] = $result['empresa'];
+    $_SESSION['loggeduser']['tipo'] = $result['tipo'];
+    $_SESSION['loggeduser']['empresa'] = $result['empresa'];
 	
 	$return = Array();
 	array_push($return, $_SESSION['loggeduser']);

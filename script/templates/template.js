@@ -342,7 +342,7 @@ template = {
 			  '<div>'+
 			    '©ConsultoriaSuperCiclo 2013'+
 			  '</div>',                         
-        'Componentremoveuser' : '<div class="hero-unit">'+
+        'Componentremoveuser' : '<div class="hero-unit">'+        	
 			  '<h3>'+
 			    '{TITLE}'+
 			  '</h3>'+   
@@ -613,6 +613,7 @@ template = {
 			    '©ConsultoriaSuperCiclo 2013'+
 			  '</div>',
         'ComponentEditEncaminhamentos' : '<div class="encaminhamentos">'+
+        							'<a href="JavaScript:window.print();">Imprimir este encaminhamento</a>'+
                                     '<div class="identificacao">'+
                                         '<h3>Identificação</h3>'+
                                         '<hr/>'+
@@ -741,6 +742,7 @@ template = {
 			    '©ConsultoriaSuperCiclo 2013'+
 			  '</div>',
         'ComponentedtEncaminhamentosAbertos' : '<div class="encaminhamentos">'+
+        							'<a href="JavaScript:window.print();">Imprimir este encaminhamento</a>'+
                                     '<div class="identificacao" >'+
                                         '<h3>Identificação</h3>'+
                                         '<hr/>'+
@@ -847,6 +849,7 @@ template = {
 			    '©ConsultoriaSuperCiclo 2013'+
 			  '</div>',     
         'ComponentedtVisualizarEncaminhamentos' : '<div class="encaminhamentos">'+
+        							'<a href="JavaScript:window.print();">Imprimir este encaminhamento</a>'+
                                     '<div class="identificacao" >'+
                                         '<h3>Identificação</h3>'+
                                         '<hr/>'+

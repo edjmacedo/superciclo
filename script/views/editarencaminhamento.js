@@ -68,7 +68,7 @@ wb.editarencaminhamento = {
                                                                 .replace("{LINK03}","index.php?page=encaminhamentosAndamento")
                                                                 .replace("{LINKLABEL03}", "Encaminhamentos em Andamento")
                                                                 .replace("{LINK04}","index.php?page=encaminhamentosFechar")
-                                                                .replace("{LINKLABEL04}", "Fechar encaminhamento");
+                                                                .replace("{LINKLABEL04}", "Histórico de Encaminhamentos");
                         
                         var activity = "";
                         var tamanho = data['encaminhamento'].length;

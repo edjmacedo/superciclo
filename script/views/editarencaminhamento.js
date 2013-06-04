@@ -29,9 +29,9 @@ wb.editarencaminhamento = {
                                                                 .replace("{LINK02}","index.php?page=editarencaminhamento")
                                                                 .replace("{LINKLABEL02}", "Encaminhamentos Abertos")
                                                                 .replace("{LINK03}","index.php?page=encaminhamentosAndamento")
-                                                                .replace("{LINKLABEL03}", "Encaminhamentos em aberto/Andamento")
+                                                                .replace("{LINKLABEL03}", "Encaminhamentos em Andamento")
                                                                 .replace("{LINK04}","index.php?page=encaminhamentosFechar")
-                                                                .replace("{LINKLABEL04}", "Fechar encaminhamento");
+                                                                .replace("{LINKLABEL04}", "Histórico de encaminhamento");
 	},
         renderEncaminhamentos: function(data){
             var activity = "";            

@@ -31,7 +31,7 @@ wb.encaminhamentosAndamento = {
                                                                 .replace("{LINK03}","index.php?page=encaminhamentosAbertos")
                                                                 .replace("{LINKLABEL03}", "Encaminhamentos em Andamento")
                                                                 .replace("{LINK04}","index.php?page=encaminhamentosFechar")
-                                                                .replace("{LINKLABEL04}", "Historico de encaminhamento");
+                                                                .replace("{LINKLABEL04}", "Histórico de encaminhamento");
 	},
         renderEncaminhamentos: function(data){
             var activity = "";            

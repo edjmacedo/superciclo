@@ -12,7 +12,7 @@ wb.cadastroencaminhamento = {
                                                                 .replace("{LINK03}","index.php?page=encaminhamentosAndamento")
                                                                 .replace("{LINKLABEL03}", "Encaminhamentos em Andamento")
                                                                 .replace("{LINK04}","index.php?page=encaminhamentosFechar")
-                                                                .replace("{LINKLABEL04}", "Fechar encaminhamento");
+                                                                .replace("{LINKLABEL04}", "Histórico de encaminhamentos");
                 $('.navbar-form').hide();
 		        service.getClinicas(function(data) {
                     wb.cadastroencaminhamento.render(data);

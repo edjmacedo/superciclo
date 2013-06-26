@@ -157,7 +157,7 @@ if($eas == "true"){
 	$eas = "";
 }
 
-$mail = new PHPMailer();
+/*$mail = new PHPMailer();
   
 $mail->IsSMTP();
 $mail->SMTPSecure = "ssl"; // set mailer to use SMTP
@@ -190,7 +190,7 @@ if(!$mail->Send()) {
 }else{
     die(json_encode(Array("status" => "OK")));
     exit;
-}
+}*/
 
 if ($result1b) {
 		$db->commit();		

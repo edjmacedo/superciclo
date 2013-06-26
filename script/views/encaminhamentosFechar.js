@@ -206,7 +206,8 @@ wb.encaminhamentosFechar = {
                                 .replace("{CHK15}", tgo)
                                 .replace("{CHK16}", espirometria)
                                 .replace("{CHK17}", eletroencefalo)
-                                .replace("{CHK18}", eletrocardio);
+                                .replace("{CHK18}", eletrocardio)
+                                .replace("{OBSERVACAO}", item.observacao);
                         }          
                                                 
                         document.getElementById('list-itens').innerHTML = activity;

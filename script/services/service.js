@@ -1,7 +1,7 @@
 var service = window.service || {};
 
 
-var BASE_URL = 'http://localhost/superciclo/rest_api/v1/';
+var BASE_URL = 'http://localhost:3000/superciclo/rest_api/v1/';
 
 
 var URLS = {

@@ -26,7 +26,7 @@ wb.meusEncaminhamentos = {
 	},
 	render: function(data){	                     	  
             document.getElementById('secondmenu').innerHTML = template.CompenentMenuLeft.replace("{LINKACTIVE02}", "active")
-                                                                .replace("{LINK01}", "index.php?page=cadastroencaminhamentouser")
+                                                                .replace("{LINK01}", "index.php?page=cadastroencaminhamento")
                                                                 .replace("{LINKLABEL}", "Cadastro de Encaminhamentos")
                                                                 .replace("{LINK02}","index.php?page=meusEncaminhamentos")
                                                                 .replace("{LINKLABEL02}", "Meus Encaminhamentos")

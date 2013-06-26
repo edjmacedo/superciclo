@@ -82,12 +82,12 @@ wb = {
 			async : false,
 			success : function(data) {
 				var sessao = data.results.items[0];
-                var tipo = data.results.items[0].tipo;
+                                var tipo = data.results.items[0].tipo;
 				wb.user = sessao;      
-                wb.tipo = tipo;
+                                wb.tipo = tipo;
 				lib.browser.setCookie("UID", JSON.stringify(sessao), "", "", "", "");
-                lib.browser.setCookie("TIPO", JSON.stringify(tipo), "", "", "", "");                
-                window.location = 'index.php?page=cadastroencaminhamento';                                
+                                lib.browser.setCookie("TIPO", JSON.stringify(tipo), "", "", "", "");                
+                                window.location = 'index.php?page=cadastroencaminhamento';                                
 			},
 			error : function(data) {
 				alert('Usuário ou senha inválido');

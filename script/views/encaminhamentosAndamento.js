@@ -178,6 +178,7 @@ wb.encaminhamentosAndamento = {
                             }
                             var nome = item.nome;                            
                             activity += template.ComponentedtEncaminhamentosAbertos.replace(tag, radioChecked)
+                                .replace("{CHECKED}", ntag)
                                 .replace("{CHECKED02}", ntag)
                                 .replace("{CHECKED03}", ntag)
                                 .replace("{CHECKED04}", ntag)
